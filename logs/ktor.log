@@ -1,0 +1,3 @@
+[2024-12-29 13:29:02,490]-[main] INFO  [Koin] - Started 4 definitions in 6.263 ms
+[2024-12-29 13:29:02,505]-[main] INFO  Application - Application started in 2.33 seconds.
+[2024-12-29 13:29:03,425]-[main] INFO  Application - Responding at http://127.0.0.1:8080
