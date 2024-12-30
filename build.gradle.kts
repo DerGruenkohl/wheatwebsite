@@ -22,6 +22,7 @@ val kotlinVersion: String by System.getProperties()
 val kvisionVersion: String by System.getProperties()
 val ktorVersion: String by project
 val logbackVersion: String by project
+val exposed_version: String by project
 
 val mainClassName = "io.ktor.server.netty.EngineMain"
 
@@ -73,6 +74,10 @@ kotlin {
                 implementation("net.hypixel:hypixel-api-transport-reactor:4.4")
                 implementation("io.projectreactor.netty:reactor-netty-core:1.1.18")
                 implementation("io.projectreactor.netty:reactor-netty-http:1.1.18")
+                implementation("org.mariadb.jdbc:mariadb-java-client:3.4.1")
+                implementation("org.jetbrains.exposed:exposed-core:$exposed_version")
+                implementation("org.jetbrains.exposed:exposed-dao:$exposed_version")
+                implementation("org.jetbrains.exposed:exposed-jdbc:$exposed_version")
             }
         }
         val jvmTest by getting {
@@ -85,6 +90,7 @@ kotlin {
             dependencies {
                 implementation("io.kvision:kvision:$kvisionVersion")
                 implementation("io.kvision:kvision-bootstrap:$kvisionVersion")
+                implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.4.0")
             }
         }
         val jsTest by getting {

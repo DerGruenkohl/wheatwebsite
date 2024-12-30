@@ -1,4 +1,4 @@
-package com.dergruenkohl.wheatwebsite
+package com.dergruenkohl.wheatwebsite.service
 
 @Suppress("ACTUAL_WITHOUT_EXPECT")
 actual class PingService : IPingService {

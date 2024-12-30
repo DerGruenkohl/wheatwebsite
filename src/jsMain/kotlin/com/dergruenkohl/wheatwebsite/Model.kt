@@ -1,5 +1,6 @@
 package com.dergruenkohl.wheatwebsite
 
+import com.dergruenkohl.wheatwebsite.service.IPingService
 import io.kvision.remote.getService
 
 object Model {

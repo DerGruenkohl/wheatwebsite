@@ -1,10 +1,11 @@
 package com.dergruenkohl.wheatwebsite
 
+
+import com.dergruenkohl.wheatwebsite.components.Searchbar
 import io.kvision.Application
 import io.kvision.CoreModule
 import io.kvision.BootstrapModule
 import io.kvision.BootstrapCssModule
-import io.kvision.html.Span
 import io.kvision.module
 import io.kvision.panel.root
 import io.kvision.startApplication
@@ -27,7 +28,7 @@ class App : Application() {
         }
         AppScope.launch {
             val pingResult = Model.ping("Hello world from client!")
-            root.add(Span(pingResult))
+            root.add(Searchbar)
         }
     }
 }
