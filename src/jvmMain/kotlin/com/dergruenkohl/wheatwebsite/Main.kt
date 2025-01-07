@@ -9,6 +9,7 @@ import io.kvision.remote.kvisionInit
 import org.koin.core.module.dsl.factoryOf
 import org.koin.dsl.module
 import com.dergruenkohl.wheatwebsite.service.*
+import com.dergruenkohl.wheatwebsite.service.profile.ProfileService
 
 fun Application.main() {
     install(Compression)
@@ -18,6 +19,7 @@ fun Application.main() {
     val module = module {
         factoryOf(::PingService)
         factoryOf(::UptimeService)
+        factoryOf(::ProfileService)
     }
     kvisionInit(module)
 }

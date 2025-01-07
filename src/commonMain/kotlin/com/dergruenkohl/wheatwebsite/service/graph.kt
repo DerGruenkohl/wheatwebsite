@@ -1,4 +1,4 @@
-package com.dergruenkohl.wheatwebsite.database.outgoing
+package com.dergruenkohl.wheatwebsite.service
 
 import kotlinx.serialization.Serializable
 

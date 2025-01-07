@@ -15,6 +15,8 @@ repositories {
     mavenCentral()
     mavenLocal()
     maven("https://repo.hypixel.net/repository/Hypixel/")
+    maven("https://packages.jetbrains.team/maven/p/kds/kotlin-ds-maven")
+    maven("https://repo.kotlin.link")
 }
 
 // Versions
@@ -66,6 +68,14 @@ kotlin {
         }
         val jvmMain by getting {
             dependencies {
+                implementation("io.ktor:ktor-client-core:$ktorVersion")
+                implementation("io.ktor:ktor-client-cio:$ktorVersion")
+                implementation("io.ktor:ktor-client-logging:$ktorVersion")
+                implementation("io.ktor:ktor-serialization-kotlinx-json:$ktorVersion")
+                implementation("io.ktor:ktor-client-content-negotiation:$ktorVersion")
+                implementation("io.ktor:ktor-client-auth:$ktorVersion")
+
+
                 implementation(kotlin("reflect"))
                 implementation("io.ktor:ktor-server-netty:$ktorVersion")
                 implementation("io.ktor:ktor-server-auth:$ktorVersion")

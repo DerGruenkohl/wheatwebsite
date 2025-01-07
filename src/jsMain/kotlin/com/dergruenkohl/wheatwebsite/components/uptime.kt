@@ -29,7 +29,6 @@ suspend fun uptimeComponent(ign: String): Div {
     }
 }
 fun buildTable(member: Member): Table {
-
     val table = Table(
         listOf("Date", "Uptime"),
         setOf(TableType.BORDERED, TableType.SMALL, TableType.STRIPED, TableType.HOVER),

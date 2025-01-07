@@ -6,8 +6,7 @@ import com.dergruenkohl.wheatwebsite.hypixel.ApiHandler
 actual class UptimeService : IUptimeService {
     override suspend fun uptime(ign: String): Member {
         val uuid = getMinecraftUUID(ign)
-        val id = ApiHandler.getGuildIDPlayer(uuid)
-        val guild = ApiHandler.getExpHistoryFromApi(id)!!
-        return guild.members.find { it.uuid.replace("-","") == uuid.replace("-","") }!!
+        val uptime = ApiHandler.getPlayerExpHistory(ign)!!
+        return Member(uuid,ign, uptime)
     }
 }
